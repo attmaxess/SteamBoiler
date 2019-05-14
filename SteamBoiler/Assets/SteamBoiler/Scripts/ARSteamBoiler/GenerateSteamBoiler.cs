@@ -80,6 +80,6 @@ namespace SteamBoiler.tPart.ARSteamBoiler
         [Header("Test Scan With Result")]
         public string imageName = string.Empty;
 
-        public 
+        //public 
     }
 }
