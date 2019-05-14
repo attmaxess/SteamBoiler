@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.iOS;
 
 namespace SteamBoiler.tPart.ARSteamBoiler
 {
     public class GenerateSteamBoiler : MonoBehaviour
-    {
+    {        
         public ARReferenceImage referenceImage = null;
-        public GameObject prefabToGenerate = null;
+        public SteamBoilerCreate boilerCreate = null;
+        public btnBackToSteamRoom btnBackToSteamRoom = null;
 
         private GameObject imageAnchorGO;
 
@@ -32,7 +34,8 @@ namespace SteamBoiler.tPart.ARSteamBoiler
                 //imageAnchorGO = Instantiate<GameObject>(prefabToGenerate, position, rotation);
                 #endregion
 
-                SteamBoilerManager.Instance.OnLoadNewImage(arImageAnchor.referenceImageName);                    
+                btnBackToSteamRoom.OnClick();
+                boilerCreate.CreateBoiler(arImageAnchor.referenceImageName);                    
             }
         }
 

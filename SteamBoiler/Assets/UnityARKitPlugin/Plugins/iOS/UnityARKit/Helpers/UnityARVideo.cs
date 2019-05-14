@@ -5,7 +5,6 @@ using UnityEngine.Rendering;
 
 namespace UnityEngine.XR.iOS
 {
-
     public class UnityARVideo : MonoBehaviour
     {
         public Material m_ClearMaterial;
@@ -38,7 +37,6 @@ namespace UnityEngine.XR.iOS
 			m_VideoCommandBuffer.Blit(null, BuiltinRenderTextureType.CurrentActive, m_ClearMaterial);
 			GetComponent<Camera>().AddCommandBuffer(CameraEvent.BeforeForwardOpaque, m_VideoCommandBuffer);
 			bCommandBufferInitialized = true;
-
 		}
 
 		void OnDestroy()

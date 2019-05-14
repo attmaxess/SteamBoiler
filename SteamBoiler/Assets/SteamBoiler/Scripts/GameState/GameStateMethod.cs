@@ -7,7 +7,7 @@ namespace SteamBoiler.tPart.GameState
 {
     public class GameStateMethod : MonoBehaviour, GameStateIMethod
     {
-        public List<GameState.eGameState> stateList = new List<GameState.eGameState>();
+        public List<eGameState> stateList = new List<eGameState>();
 
         public virtual void OnClick()
         {

@@ -80,7 +80,7 @@ public class UnityARCameraManager : MonoBehaviour
     public void OnDestroy()
     {
         sessionStarted = false;
-        m_session.Pause();
+        if (m_session != null) m_session.Pause();
     }
 
     void FirstFrameUpdate(UnityARCamera cam)

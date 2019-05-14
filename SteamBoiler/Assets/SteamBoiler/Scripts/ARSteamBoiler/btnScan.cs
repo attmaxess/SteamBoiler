@@ -7,7 +7,10 @@ namespace SteamBoiler.tPart.ARSteamBoiler
     public class btnScan : MonoBehaviour
     {
         [Header("Input")]
+        public SteamBoilerManager steamManager = null;
+        public CanvasGroupAlphaManager logoCanvas = null;
         public CanvasGroupAlphaManager boilerCanvas = null;
+        public CanvasGroupAlphaManager arkitCanvas = null;
         public UnityARCameraManager arKitManager = null;
 
         [ContextMenu("OnClick")]
@@ -18,12 +21,15 @@ namespace SteamBoiler.tPart.ARSteamBoiler
 
         IEnumerator C_OnClick()
         {
-            boilerCanvas.GoTo1WaitBack0();
+            boilerCanvas.Alpha0();
+            arkitCanvas.Alpha1();
 
-            yield return new WaitForSeconds(.3f);
+            logoCanvas.Alpha1();
+            yield return new WaitUntil(() => logoCanvas.doneC_ToAlPha == true);            
             arKitManager.Start();
-
-            yield return new WaitUntil(() => boilerCanvas.doneGoToWaitBack == true);
+            steamManager.room.gameObject.SetActive(false);
+            logoCanvas.Alpha0();
+            yield return new WaitUntil(() => logoCanvas.doneC_ToAlPha == false);            
 
             yield break;
         }

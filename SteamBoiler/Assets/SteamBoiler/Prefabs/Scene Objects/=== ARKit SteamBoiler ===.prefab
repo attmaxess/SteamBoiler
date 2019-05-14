@@ -230,6 +230,7 @@ MonoBehaviour:
   detectionImages: {fileID: 11400000, guid: 99f631f78c5d14f8cb9cc4e02da07eee, type: 2}
   maximumNumberOfTrackedImages: 3
   detectionObjects: {fileID: 0}
+  RunARKitAtStart: 1
 --- !u!114 &114396996781241254
 MonoBehaviour:
   m_ObjectHideFlags: 1

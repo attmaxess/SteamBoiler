@@ -9,7 +9,8 @@ public class CanvasGroupAlphaManager : MonoBehaviour
 
     [Header("Process")]
     public float alphaSpeed = 9f;
-    public bool Alpha0AtStart = true;
+    public bool Alpha0AtStart = false;
+    public bool Alpha1AtStart = false;
 
     private void Start()
     {
@@ -17,6 +18,11 @@ public class CanvasGroupAlphaManager : MonoBehaviour
         {
             InstantAlpha1();
             Alpha0();
+        }
+        else if (Alpha1AtStart)
+        {
+            InstantAlpha0();
+            Alpha1();
         }
     }
 
@@ -72,6 +78,7 @@ public class CanvasGroupAlphaManager : MonoBehaviour
     {
         canvasGroup.alpha = a;
         canvasGroup.interactable = a != 0;
+        canvasGroup.blocksRaycasts = a != 0;
     }
 
     [Header("C_ToAlPha")]
@@ -90,6 +97,7 @@ public class CanvasGroupAlphaManager : MonoBehaviour
         }
 
         canvasGroup.interactable = a != 0;
+        canvasGroup.blocksRaycasts = a != 0;
 
         doneC_ToAlPha = true;
         yield break;

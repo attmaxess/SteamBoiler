@@ -5,16 +5,15 @@ using UnityEngine;
 
 namespace SteamBoiler.tPart.GameState
 {
+    [Serializable]
+    public enum eGameState
+    {
+        SteamRoom,
+        ArKit
+    }
+
     public class GameState : Singleton<GameState>
     {
-        [Serializable]
-        public enum eGameState
-        {
-            ReadyToPlay,
-            ArKit,
-            PlaceNote
-        }
-
         public List<eGameState> stateList = new List<eGameState>();
 
         public void AddOnce(List<eGameState> states)

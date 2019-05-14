@@ -1,0 +1,12 @@
+{
+    "name": "SteamBoiler",
+    "references": [
+        "UnityARKit",
+        "Lean",
+        "GameState"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

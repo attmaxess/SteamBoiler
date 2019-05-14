@@ -1,0 +1,14 @@
+{
+    "name": "Assets",
+    "references": [
+        "GameState",
+        "Lean",
+        "SteamBoiler",
+        "UnityARKit",
+        "Unity.TextMeshPro"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}
