@@ -436,10 +436,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1253343014651912, guid: e54b7dc026ad41743b5cc42d35a96465, type: 2}
-      propertyPath: m_Name
-      value: btnSceneARScan
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e54b7dc026ad41743b5cc42d35a96465, type: 2}
   m_IsPrefabAsset: 0

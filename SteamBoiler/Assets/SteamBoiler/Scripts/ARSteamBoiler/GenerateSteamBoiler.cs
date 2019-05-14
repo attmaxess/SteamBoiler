@@ -77,10 +77,9 @@ namespace SteamBoiler.tPart.ARSteamBoiler
             UnityARSessionNativeInterface.ARImageAnchorRemovedEvent -= RemoveImageAnchor;
         }
 
-        // Update is called once per frame
-        void Update()
-        {
+        [Header("Test Scan With Result")]
+        public string imageName = string.Empty;
 
-        }
+        public 
     }
 }

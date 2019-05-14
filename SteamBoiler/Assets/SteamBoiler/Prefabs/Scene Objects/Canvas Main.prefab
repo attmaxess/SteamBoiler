@@ -39,9 +39,9 @@ GameObject:
   - component: {fileID: 222469975441875954}
   - component: {fileID: 114615020026946290}
   - component: {fileID: 114616494756301582}
-  - component: {fileID: 114361919504832284}
+  - component: {fileID: 114462615160757996}
   m_Layer: 5
-  m_Name: btnARScan
+  m_Name: btnSceneARScan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
---- !u!114 &114361919504832284
+--- !u!114 &114462615160757996
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,14 +182,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1253343014651912}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23bb46a4257e0a8498b98b79d6546161, type: 3}
+  m_Script: {fileID: 11500000, guid: 8923264a17adbf34f96faa3569efeb1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steamManager: {fileID: 0}
-  logoCanvas: {fileID: 0}
-  boilerCanvas: {fileID: 114859318213858752}
-  arkitCanvas: {fileID: 0}
-  arKitManager: {fileID: 0}
+  sceneName: ARScan
 --- !u!114 &114483033279838458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -301,8 +297,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114361919504832284}
-        m_MethodName: OnClick
+      - m_Target: {fileID: 114462615160757996}
+        m_MethodName: DoLoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
