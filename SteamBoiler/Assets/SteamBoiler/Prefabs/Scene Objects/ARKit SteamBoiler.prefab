@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4262718011000612}
   - component: {fileID: 114401432605426558}
   - component: {fileID: 114600701823354008}
+  - component: {fileID: 114822661926468116}
   m_Layer: 0
   m_Name: BlueBoiler
   m_TagString: Untagged
@@ -423,6 +424,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce437cef046e841aabd6070890e79d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114822661926468116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1312475645876102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0fc180a6fbcf440a46fa2676aacf30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arBoiler: {fileID: 11400000, guid: 8b62ba7654b254045a5e1442c128db5e, type: 2}
+  loadSceneArModel: {fileID: 114600701823354008}
+  imageName: BlueBoiler
 --- !u!114 &114861681310102978
 MonoBehaviour:
   m_ObjectHideFlags: 1

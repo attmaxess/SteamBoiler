@@ -8,6 +8,7 @@ namespace SteamBoiler.tPart.ARSteamBoiler
 {
     public class GenerateSteamBoiler : MonoBehaviour
     {        
+        [Header("Inputs")]
         public ARReferenceImage referenceImage = null;
         public SteamBoilerScriptable arBoiler = null;
         public LoadScene loadSceneArModel = null;
@@ -75,11 +76,6 @@ namespace SteamBoiler.tPart.ARSteamBoiler
             UnityARSessionNativeInterface.ARImageAnchorAddedEvent -= AddImageAnchor;
             UnityARSessionNativeInterface.ARImageAnchorUpdatedEvent -= UpdateImageAnchor;
             UnityARSessionNativeInterface.ARImageAnchorRemovedEvent -= RemoveImageAnchor;
-        }
-
-        [Header("Test Scan With Result")]
-        public string imageName = string.Empty;
-
-        public 
+        }        
     }
 }
