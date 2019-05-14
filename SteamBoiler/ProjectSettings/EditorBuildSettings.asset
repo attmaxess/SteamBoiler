@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/SteamBoiler/Scenes/Main.unity
+    guid: ea2d320526f3b984da780a7dfb2c0a7f
+  - enabled: 1
+    path: Assets/SteamBoiler/Scenes/ListBoiler.unity
+    guid: 42d36c8db7607ad42b0ab9ab39a95f7f
+  - enabled: 1
+    path: Assets/SteamBoiler/Scenes/ARScan.unity
+    guid: 11b14ee0cb6defb41b7a586a4c22958f
+  - enabled: 1
+    path: Assets/SteamBoiler/Scenes/ARBoiler.unity
+    guid: 061393e3b4996a14298d0098932864b7
+  - enabled: 1
+    path: Assets/SteamBoiler/Scenes/SteamBoiler.unity
+    guid: 8bc7c15afb9fe374c80bdeb9913b327e
+  - enabled: 1
+    path: Assets/SteamBoiler/Scenes/TransparentBoiler.unity
+    guid: a43ee5435c5f058419e1939abfd935d7
   m_configObjects: {}

@@ -89,9 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4703269540872532}
   - component: {fileID: 114030512404675040}
-  - component: {fileID: 114999633608879152}
   - component: {fileID: 65670893913525726}
-  - component: {fileID: 114628175583200716}
   m_Layer: 0
   m_Name: RedBoiler
   m_TagString: Untagged
@@ -580,42 +578,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b0913ca7d851449a6d999ee961e02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageName: RedBoiler
   outers:
   - {fileID: 4574919854964698}
   inners: []
---- !u!114 &114628175583200716
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1888108391062016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35034192fef15c34892659b6c60bef60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreStartedOverGui: 1
-  IgnoreIsOverGui: 0
-  RequiredFingerCount: 0
-  RequiredSelectable: {fileID: 0}
-  Camera: {fileID: 0}
---- !u!114 &114999633608879152
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1888108391062016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52d72cc6210cb7144a24acb7402222a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreStartedOverGui: 1
-  IgnoreIsOverGui: 0
-  RequiredFingerCount: 0
-  RequiredSelectable: {fileID: 0}
-  Camera: {fileID: 0}
-  Relative: 0
 --- !u!136 &136533620792591538
 CapsuleCollider:
   m_ObjectHideFlags: 1

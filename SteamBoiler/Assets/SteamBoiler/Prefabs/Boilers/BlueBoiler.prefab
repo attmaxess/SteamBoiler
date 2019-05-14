@@ -123,8 +123,6 @@ GameObject:
   - component: {fileID: 4314009994214264}
   - component: {fileID: 114019412644307740}
   - component: {fileID: 65364353345548538}
-  - component: {fileID: 114660156415399332}
-  - component: {fileID: 114288145885591022}
   m_Layer: 0
   m_Name: BlueBoiler
   m_TagString: Untagged
@@ -456,39 +454,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b0913ca7d851449a6d999ee961e02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageName: BlueBoiler
   outers:
   - {fileID: 4230712211427086}
   inners: []
---- !u!114 &114288145885591022
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1949312819902616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b18a4a4aa7fc294488bc837869848017, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolRotate: 1
-  speed: 1
-  limitX: {x: 0, y: 0}
---- !u!114 &114660156415399332
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1949312819902616}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35034192fef15c34892659b6c60bef60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IgnoreStartedOverGui: 1
-  IgnoreIsOverGui: 0
-  RequiredFingerCount: 0
-  RequiredSelectable: {fileID: 0}
-  Camera: {fileID: 0}
 --- !u!136 &136949927581262294
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -9,8 +9,8 @@ namespace SteamBoiler.tPart.ARSteamBoiler
     public class GenerateSteamBoiler : MonoBehaviour
     {        
         public ARReferenceImage referenceImage = null;
-        public SteamBoilerCreate boilerCreate = null;
-        public btnBackToSteamRoom btnBackToSteamRoom = null;
+        public SteamBoilerScriptable arBoiler = null;
+        public LoadScene loadSceneArModel = null;
 
         private GameObject imageAnchorGO;
 
@@ -34,8 +34,8 @@ namespace SteamBoiler.tPart.ARSteamBoiler
                 //imageAnchorGO = Instantiate<GameObject>(prefabToGenerate, position, rotation);
                 #endregion
 
-                btnBackToSteamRoom.OnClick();
-                boilerCreate.CreateBoiler(arImageAnchor.referenceImageName);                    
+                arBoiler.imageName = arImageAnchor.referenceImageName;
+                loadSceneArModel.DoLoadScene();
             }
         }
 

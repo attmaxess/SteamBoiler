@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BoilerGO : MonoBehaviour
 {
+    [Header("Define")]
+    public string imageName = string.Empty;
+
     [Header("Body Parts")]
     public List<Transform> outers = new List<Transform>();
     public List<Transform> inners = new List<Transform>();
