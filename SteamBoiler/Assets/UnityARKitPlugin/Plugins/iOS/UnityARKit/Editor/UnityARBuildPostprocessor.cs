@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.Callbacks;
@@ -378,3 +379,4 @@ public class UnityARBuildPostprocessor
 #endif // #if UNITY_IOS
 	}
 }
+#endif
