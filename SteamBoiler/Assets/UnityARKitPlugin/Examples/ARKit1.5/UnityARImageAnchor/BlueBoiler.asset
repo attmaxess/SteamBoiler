@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: BlueBoiler
   m_EditorClassIdentifier: 
   imageName: BlueBoiler
-  imageTexture: {fileID: 2800000, guid: 2d7ed6d2b63c5544ab09ada71d133f44, type: 3}
+  imageTexture: {fileID: 2800000, guid: b2baeb6188f935b479a97331aad0e15f, type: 3}
   physicalSize: 0.06

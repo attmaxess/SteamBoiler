@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: RedBoiler
   m_EditorClassIdentifier: 
   imageName: RedBoiler
-  imageTexture: {fileID: 2800000, guid: 6f589dda138053742b89f2d18189d5b2, type: 3}
+  imageTexture: {fileID: 2800000, guid: 10e7abddd8d730147825c03481d3e9cb, type: 3}
   physicalSize: 0.06
