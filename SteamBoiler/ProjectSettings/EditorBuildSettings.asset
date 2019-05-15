@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SteamBoiler/Scenes/TransparentBoiler.unity
     guid: a43ee5435c5f058419e1939abfd935d7
+  - enabled: 1
+    path: Assets/UnityARKitPlugin/Examples/ARKit1.5/UnityARImageAnchor/UnityARImageAnchor.unity
+    guid: befc06ba4fe0046439ef5dac5a33c0e7
   m_configObjects: {}
