@@ -1,4 +1,5 @@
-﻿using tung.IntroBoiler;
+﻿using SteamBoiler.tPart.ARSteamBoiler;
+using tung.IntroBoiler;
 using UnityEngine;
 
 [RequireComponent(typeof(IntroSelectable))]
@@ -23,8 +24,14 @@ public class ShowIntroPopupAfterClick : MonoBehaviour
     void ActiveIntroPopup(string name)
     {
         CanvasManager manager = FindObjectOfType<CanvasManager>();
+        if (string.IsNullOrEmpty(manager.currentBoiler.imageName))
+            return;
+
+        ASteamBoiler currentBoiler = manager.database.GetASteamBoiler(manager.currentBoiler.imageName);
+        BoilerPart boilerPart = currentBoiler.GetBoilerPart(name);
+
         manager.introPanel.gameObject.SetActive(true);
-        manager.introPanel.introText.text = "This is the " + name;
+        manager.introPanel.introText.text = "This is the " + boilerPart.partIntro;
     }
 
     public void OnDisable()

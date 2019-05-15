@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 533864846}
   - component: {fileID: 533864847}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1309,7 +1309,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 871a11d949b6d814cadcd9fabb54f151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  database: {fileID: 11400000, guid: 539e1fc4e40b5f7409191a16fd164b5d, type: 2}
   introPanel: {fileID: 748200752}
+  currentBoiler: {fileID: 11400000, guid: 8b62ba7654b254045a5e1442c128db5e, type: 2}
 --- !u!1 &1820319209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,7 +1392,7 @@ GameObject:
   - component: {fileID: 1853789677}
   - component: {fileID: 1853789678}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1708,7 +1710,7 @@ GameObject:
   - component: {fileID: 2088537436}
   - component: {fileID: 2088537437}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
