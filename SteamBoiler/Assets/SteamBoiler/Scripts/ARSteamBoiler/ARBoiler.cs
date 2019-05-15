@@ -6,6 +6,9 @@ namespace SteamBoiler.tPart.ARSteamBoiler
 {
     public class ARBoiler : MonoBehaviour
     {
+        [Header("Debug")]
+        public bool isDebug = true;
+
         [Header("Inputs")]
         public SteamBoilerDatabase boilerDatabase = null;
         public SteamBoilerScriptable currentARBoiler = null;
@@ -15,6 +18,7 @@ namespace SteamBoiler.tPart.ARSteamBoiler
         public void Start()
         {
             if (string.IsNullOrEmpty(currentARBoiler.imageName)) return;
+            if (isDebug) Debug.Log("Loading " + currentARBoiler.imageName);
 
             if (boilerDatabase.boilerList.Count == 0) return;
 

@@ -576,6 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67c9e57750a280643aaaa2d35b5cc7a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDebug: 1
   boilerDatabase: {fileID: 11400000, guid: 539e1fc4e40b5f7409191a16fd164b5d, type: 2}
   currentARBoiler: {fileID: 11400000, guid: 8b62ba7654b254045a5e1442c128db5e, type: 2}
   boilerHolder: {fileID: 0}
