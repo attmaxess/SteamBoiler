@@ -11,7 +11,18 @@ namespace SteamBoiler.tPart.ARSteamBoiler
         public string imageName = string.Empty;
         public GameObject prefab = null;
 
+        public List<BoilerPart> boilerParts = new List<BoilerPart>();
+        public BoilerPart GetBoilerPart(string partName) { return boilerParts.Find((x) => x.partName == partName); }
+
+
         public ASteamBoiler() { }
+    }
+
+    [Serializable]
+    public class BoilerPart
+    {
+        public string partName;
+        public string partIntro;
     }
 
     [CreateAssetMenu(fileName = "SteamBoilerDatabase", menuName = "SteamBoiler/SteamBoilerDatabase")]
