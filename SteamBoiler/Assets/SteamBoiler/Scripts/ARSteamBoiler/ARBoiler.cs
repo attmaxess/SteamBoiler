@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace SteamBoiler.tPart.ARSteamBoiler
 {
@@ -13,6 +14,8 @@ namespace SteamBoiler.tPart.ARSteamBoiler
         public SteamBoilerDatabase boilerDatabase = null;
         public SteamBoilerScriptable currentARBoiler = null;
         public Transform boilerHolder = null;
+        public Button btnUnloadOutside = null;
+        public Button btnReloadOutside = null;
 
         [ContextMenu("Start")]
         public void Start()
@@ -27,6 +30,9 @@ namespace SteamBoiler.tPart.ARSteamBoiler
 
             BoilerGO newBoiler = Instantiate(boilerDatabase.boilerList[idBoiler].prefab, Vector3.zero, Quaternion.identity, boilerHolder).GetComponent<BoilerGO>();
             newBoiler.gameObject.AddComponent<RotateAndLimitX>();
+
+            btnUnloadOutside.gameObject.SetActive(true);
+            btnReloadOutside.gameObject.SetActive(false);
         }
     }
 }

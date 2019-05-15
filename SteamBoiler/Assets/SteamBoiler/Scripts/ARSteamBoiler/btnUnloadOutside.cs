@@ -6,9 +6,6 @@ namespace SteamBoiler.tPart.ARSteamBoiler
 {
     public class btnUnloadOutside : MonoBehaviour
     {
-        [Header("Input")]
-        public SteamBoilerManager steamManager = null;        
-
         [ContextMenu("OnClick")]
         public void OnClick()
         {
@@ -17,11 +14,10 @@ namespace SteamBoiler.tPart.ARSteamBoiler
 
         IEnumerator C_OnClick()
         {
-            if (steamManager.currentBoiler != null)
-            {
-                BoilerGO boiler = steamManager.currentBoiler.GetComponent<BoilerGO>();
-                boiler.OuterOff();
-            }
+            BoilerGO boiler = FindObjectOfType<BoilerGO>();
+            if (boiler == null) yield break;
+            boiler.OuterOff();
+
             yield break;
         }
     }

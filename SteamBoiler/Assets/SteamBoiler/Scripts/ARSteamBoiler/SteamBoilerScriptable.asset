@@ -11,4 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3608ff81b255313458fd34e43e648a54, type: 3}
   m_Name: SteamBoilerScriptable
   m_EditorClassIdentifier: 
-  imageName: RedBoiler
+  database: {fileID: 11400000, guid: 539e1fc4e40b5f7409191a16fd164b5d, type: 2}
+  _imageName: 
+  currentBoiler:
+    imageName: 
+    prefab: {fileID: 0}
+    boilerParts: []

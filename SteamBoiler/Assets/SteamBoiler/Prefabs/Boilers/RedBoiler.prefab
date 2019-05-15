@@ -481,7 +481,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: f3474014512ef5a42aa6e6e4ee067a07, type: 2}
+  - {fileID: 2100000, guid: 3de828933e9b5bd4db1a20ee2c3401f5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageName: RedBoiler
   outers:
-  - {fileID: 4574919854964698}
+  - {fileID: 4143286811495818}
   inners: []
 --- !u!136 &136533620792591538
 CapsuleCollider:

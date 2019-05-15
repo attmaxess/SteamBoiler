@@ -33,6 +33,17 @@ public class BoilerGO : MonoBehaviour
     void SetOuter(bool Set)
     {
         if (outers.Count == 0) return;
-        foreach (Transform o in outers) o.gameObject.SetActive(Set);
+        foreach (Transform o in outers)
+        {
+            MeshRenderer mr = o.gameObject.GetComponent<MeshRenderer>();
+            if (mr != null)
+            {
+                Color currentColor = mr.material.color;
+
+                mr.material.SetFloat("_Mode", Set ? 0f : 3f);
+                mr.material.color =
+                    new Color(currentColor.r, currentColor.g, currentColor.b, Set ? 1 : 0);
+            }            
+        }
     }
 }

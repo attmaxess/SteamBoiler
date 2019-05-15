@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 222102866336846844}
   - component: {fileID: 114060479282677960}
   - component: {fileID: 114573178125154678}
+  - component: {fileID: 114912989722287830}
   - component: {fileID: 114297993256219806}
   m_Layer: 5
   m_Name: btnUnloadOutside
@@ -284,7 +285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb90b847af8488419de07b3bc9b5c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steamManager: {fileID: 0}
 --- !u!114 &114397585582743008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -477,7 +477,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0db455bf61b35e4cb921bd2ded14149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steamManager: {fileID: 0}
 --- !u!114 &114662085728885068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -580,6 +579,8 @@ MonoBehaviour:
   boilerDatabase: {fileID: 11400000, guid: 539e1fc4e40b5f7409191a16fd164b5d, type: 2}
   currentARBoiler: {fileID: 11400000, guid: 8b62ba7654b254045a5e1442c128db5e, type: 2}
   boilerHolder: {fileID: 0}
+  btnUnloadOutside: {fileID: 114573178125154678}
+  btnReloadOutside: {fileID: 114487530388361458}
 --- !u!114 &114904177898905952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -596,6 +597,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114912989722287830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1555677308695224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d607b6b6c584f4048974cd6f3bc081c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  steamBoilerManager: {fileID: 0}
+  currentMeshRenderer: {fileID: 0}
 --- !u!114 &114952189153528532
 MonoBehaviour:
   m_ObjectHideFlags: 1
