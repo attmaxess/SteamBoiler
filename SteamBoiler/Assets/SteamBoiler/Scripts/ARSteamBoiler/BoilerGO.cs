@@ -14,6 +14,7 @@ public class BoilerGO : MonoBehaviour
 
     private void Start()
     {
+        OuterOn();
         SetupInside();
     }
 
@@ -88,7 +89,7 @@ public class BoilerGO : MonoBehaviour
 
         if (allPart == null)
         {
-            Debug.Log("Boiler noy have part !");
+            Debug.Log("Boiler not have part !");
             doneSetupInside = true;
             yield break;
         }
@@ -114,5 +115,18 @@ public class BoilerGO : MonoBehaviour
         doneSetupInside = true;
 
         yield break;
+    }
+
+    void SetInnerClickable(bool Set)
+    {
+        Transform[] allPart = inside.GetComponentsInChildren<Transform>();
+
+        foreach (var part in allPart)
+        {
+            //if (part.GetComponent<)
+            //{
+                
+            //}
+        }
     }
 }

@@ -28,7 +28,7 @@ public class BoilerGOCreateArrow : MonoBehaviour
 
         if (allPart == null)
         {
-            Debug.Log("Boiler noy have part !");
+            Debug.Log("Boiler not have part !");
             return;
         }
 
