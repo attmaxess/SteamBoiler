@@ -17,20 +17,22 @@ MonoBehaviour:
     boilerParts:
     - partName: Head
       partIntro: Head Shot
+      isClickable: 1
     - partName: Body
       partIntro: Than Body
+      isClickable: 0
     - partName: Tail
       partIntro: Tung Tail
+      isClickable: 1
   - imageName: RedBoiler
-    prefab: {fileID: 1888108391062016, guid: b0be0bcb10a5c6c4891b6dc052ca5428, type: 2}
+    prefab: {fileID: 1949312819902616, guid: fefe6a6284935eb4eaf9df944059eef1, type: 2}
     boilerParts:
-    - partName: Capsule1
-      partIntro: Capsule1Capsule1
-    - partName: Capsule2
-      partIntro: Capsule2vsdfg
-    - partName: Capsule3
-      partIntro: dsfsdfs
-    - partName: Capsule4
-      partIntro: 345435
-    - partName: Capsule5
-      partIntro: dfgsd3894574]
+    - partName: Head
+      partIntro: Head Head Head
+      isClickable: 1
+    - partName: Body
+      partIntro: Body Body Body
+      isClickable: 0
+    - partName: Tail
+      partIntro: Tail Tail Tail
+      isClickable: 1

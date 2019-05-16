@@ -23,6 +23,7 @@ namespace SteamBoiler.tPart.ARSteamBoiler
     {
         public string partName;
         public string partIntro;
+        public bool isClickable;
     }
 
     [CreateAssetMenu(fileName = "SteamBoilerDatabase", menuName = "SteamBoiler/SteamBoilerDatabase")]
