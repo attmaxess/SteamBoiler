@@ -17,6 +17,7 @@ namespace SteamBoiler.tPart.ARSteamBoiler
             BoilerGO boiler = FindObjectOfType<BoilerGO>();
             if (boiler == null) yield break;
             boiler.OuterOff();
+            boiler.GetComponent<BoilerGOCreateArrow>().AddArrow();
 
             yield break;
         }

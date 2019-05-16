@@ -14,7 +14,6 @@ MonoBehaviour:
   boilerList:
   - imageName: BlueBoiler
     prefab: {fileID: 1949312819902616, guid: a970ab8622058d7498d4f7131c2ca4f5, type: 2}
-    IntroText: 
     boilerParts:
     - partName: Head
       partIntro: Head Shot
@@ -24,5 +23,14 @@ MonoBehaviour:
       partIntro: Tung Tail
   - imageName: RedBoiler
     prefab: {fileID: 1888108391062016, guid: b0be0bcb10a5c6c4891b6dc052ca5428, type: 2}
-    IntroText: 
-    boilerParts: []
+    boilerParts:
+    - partName: Capsule1
+      partIntro: Capsule1Capsule1
+    - partName: Capsule2
+      partIntro: Capsule2vsdfg
+    - partName: Capsule3
+      partIntro: dsfsdfs
+    - partName: Capsule4
+      partIntro: 345435
+    - partName: Capsule5
+      partIntro: dfgsd3894574]

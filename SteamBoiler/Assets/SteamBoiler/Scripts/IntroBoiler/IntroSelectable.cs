@@ -1,7 +1,7 @@
 ﻿using Lean.Touch;
 
 public class IntroSelectable : LeanSelectableBehaviour
-{    
+{
     public delegate void delAfterClick(string name);
     public delAfterClick delAfter = null;
 

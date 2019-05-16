@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23127683507586234}
   - component: {fileID: 136797062359670710}
   m_Layer: 0
-  m_Name: Capsule (4)
+  m_Name: Capsule5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 23529031220440568}
   - component: {fileID: 136533620792591538}
   m_Layer: 0
-  m_Name: Capsule (3)
+  m_Name: Capsule4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 23409302881417046}
   - component: {fileID: 136902784713928734}
   m_Layer: 0
-  m_Name: Capsule (2)
+  m_Name: Capsule3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,7 +90,8 @@ GameObject:
   - component: {fileID: 4703269540872532}
   - component: {fileID: 95355674685997254}
   - component: {fileID: 114030512404675040}
-  - component: {fileID: 65670893913525726}
+  - component: {fileID: 114858442981324594}
+  - component: {fileID: 114936305429582454}
   m_Layer: 0
   m_Name: RedBoiler
   m_TagString: Untagged
@@ -107,7 +108,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4143286811495818}
   - component: {fileID: 33571967797661878}
-  - component: {fileID: 65505933069690768}
   - component: {fileID: 23785454340891402}
   m_Layer: 0
   m_Name: Cube
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 23635284114111090}
   - component: {fileID: 136862146753160698}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Capsule1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 23604333086955458}
   - component: {fileID: 136965855586399762}
   m_Layer: 0
-  m_Name: Capsule (1)
+  m_Name: Capsule2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -544,30 +544,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1785906656862598}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65505933069690768
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1901320900561778}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65670893913525726
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1888108391062016}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95355674685997254
 Animator:
   serializedVersion: 3
@@ -601,6 +577,32 @@ MonoBehaviour:
   outers:
   - {fileID: 4143286811495818}
   inners: []
+  doneSetupInside: 1
+--- !u!114 &114858442981324594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888108391062016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b76dcbb5244b4714cb92da66580a8ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 1456054153987188, guid: 9a0034cbd1809ac48a0c1448b0c71ca8,
+    type: 2}
+--- !u!114 &114936305429582454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888108391062016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e9b648bc65ad243ba08a9fb6943d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mr: {fileID: 0}
 --- !u!136 &136533620792591538
 CapsuleCollider:
   m_ObjectHideFlags: 1

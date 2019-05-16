@@ -121,16 +121,16 @@ namespace Lean.Touch
 		}
 
 		/// <summary>This event is called when selection begins (finger = the finger that selected this).</summary>
-		public LeanFingerEvent OnSelect;
+		public LeanFingerEvent OnSelect = new LeanFingerEvent();
 
 		/// <summary>This event is called every frame this selectable is selected with a finger (finger = the finger that selected this).</summary>
-		public LeanFingerEvent OnSelectSet;
+		public LeanFingerEvent OnSelectSet = new LeanFingerEvent();
 
 		/// <summary>This event is called when the selecting finger goes up (finger = the finger that selected this).</summary>
-		public LeanFingerEvent OnSelectUp;
+		public LeanFingerEvent OnSelectUp = new LeanFingerEvent();
 
 		/// <summary>This event is called when this is deselected, if OnSelectUp hasn't been called yet, it will get called first.</summary>
-		public UnityEvent OnDeselect;
+		public UnityEvent OnDeselect = new UnityEvent();
 
 		/// <summary>If you want to change this, do it via the Select/Deselect methods (accessible from the context menu gear icon in editor)</summary>
 		[Tooltip("If you want to change this, do it via the Select/Deselect methods (accessible from the context menu gear icon in editor)")]

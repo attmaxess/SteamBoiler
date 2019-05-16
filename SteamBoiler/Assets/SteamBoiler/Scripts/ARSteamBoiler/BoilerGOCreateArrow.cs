@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoilerGOCreateArrow : MonoBehaviour {
+public class BoilerGOCreateArrow : MonoBehaviour
+{
     public GameObject arrowPrefab;
     Transform inside = null;
+
     // Use this for initialization
-    void Start () {
-        AddArrow();
-	}
+    void Start()
+    {
+        
+    }
 
     [ContextMenu("AddArrow")]
     public void AddArrow()
@@ -23,18 +26,18 @@ public class BoilerGOCreateArrow : MonoBehaviour {
 
         Transform[] allPart = inside.GetComponentsInChildren<Transform>();
 
-        if(allPart == null)
+        if (allPart == null)
         {
             Debug.Log("Boiler noy have part !");
             return;
         }
 
-        foreach(var part in allPart)
+        foreach (var part in allPart)
         {
-            if(part.GetComponent<IntroSelectable>() != null)
+            if (part.GetComponent<IntroSelectable>() != null)
             {
-                GameObject arrow = Instantiate(arrowPrefab, part.transform);
-                arrow.name = "Arrow";
+                ReportArrow arrow = Instantiate(arrowPrefab).GetComponent<ReportArrow>();
+                arrow.SetupInit(part);
             }
         }
     }
@@ -43,7 +46,7 @@ public class BoilerGOCreateArrow : MonoBehaviour {
     public void ClearArrow()
     {
         Transform[] allInside = inside.GetComponentsInChildren<Transform>();
-        foreach(var arrow in allInside)
+        foreach (var arrow in allInside)
         {
             if (arrow.name.Equals("Arrow"))
             {

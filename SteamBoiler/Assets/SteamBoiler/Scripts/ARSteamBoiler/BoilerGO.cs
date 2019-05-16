@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Lean.Touch;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,11 @@ public class BoilerGO : MonoBehaviour
     [Header("Body Parts")]
     public List<Transform> outers = new List<Transform>();
     public List<Transform> inners = new List<Transform>();
+
+    private void Start()
+    {
+        SetupInside();
+    }
 
     [ContextMenu("OuterToggle")]
     public void OuterToggle()
@@ -52,7 +58,61 @@ public class BoilerGO : MonoBehaviour
                     new Color(currentColor.r, currentColor.g, currentColor.b, Set ? 1 : 0);
 
                 //mr.UpdateGIMaterials();
-            }            
+            }
         }
+    }
+
+    [Header("Inside")]
+    public bool doneSetupInside = true;
+    Transform inside = null;
+
+    public void SetupInside()
+    {
+        StartCoroutine(C_SetupInside());
+    }
+
+    IEnumerator C_SetupInside()
+    {
+        doneSetupInside = false;
+
+        inside = gameObject.transform.Find("Inside");
+
+        if (inside == null)
+        {
+            Debug.Log("Boiler not have inside !");
+            doneSetupInside = true;
+            yield break;
+        }
+
+        Transform[] allPart = inside.GetComponentsInChildren<Transform>();
+
+        if (allPart == null)
+        {
+            Debug.Log("Boiler noy have part !");
+            doneSetupInside = true;
+            yield break;
+        }
+
+        foreach (var part in allPart)
+        {
+            if (part.transform != inside)
+            {
+                part.gameObject.AddComponent<LeanSelectable>();
+                yield return new WaitUntil(() => part.gameObject.GetComponent<LeanSelectable>() != null);                
+
+                part.gameObject.AddComponent<LeanSelectableRendererColor>();
+                yield return new WaitUntil(() => part.gameObject.GetComponent<LeanSelectableRendererColor>() != null);
+
+                part.gameObject.AddComponent<IntroSelectable>();
+                yield return new WaitUntil(() => part.gameObject.GetComponent<IntroSelectable>() != null);
+
+                part.gameObject.AddComponent<ShowIntroPopupAfterClick>();
+                yield return new WaitUntil(() => part.gameObject.GetComponent<ShowIntroPopupAfterClick>() != null);
+            }
+        }
+
+        doneSetupInside = true;
+
+        yield break;
     }
 }
