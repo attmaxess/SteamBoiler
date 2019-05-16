@@ -28,8 +28,7 @@ namespace SteamBoiler.tPart.ARSteamBoiler
             int idBoiler = boilerDatabase.boilerList.FindIndex((x) => x.imageName == currentARBoiler.imageName);
             if (idBoiler == -1) return;
 
-            BoilerGO newBoiler = Instantiate(boilerDatabase.boilerList[idBoiler].prefab, Vector3.zero, Quaternion.identity, boilerHolder).GetComponent<BoilerGO>();
-            newBoiler.gameObject.AddComponent<RotateAndLimitX>();
+            BoilerGO newBoiler = Instantiate(boilerDatabase.boilerList[idBoiler].prefab, Vector3.zero, Quaternion.identity, boilerHolder).GetComponent<BoilerGO>();            
 
             btnUnloadOutside.gameObject.SetActive(true);
             btnReloadOutside.gameObject.SetActive(false);

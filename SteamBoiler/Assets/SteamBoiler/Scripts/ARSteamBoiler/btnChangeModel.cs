@@ -38,8 +38,7 @@ namespace SteamBoiler.tPart.ARSteamBoiler
 
             int idNext = idCurrent == boilerDatabase.boilerList.Count - 1 ? 0 : idCurrent + 1;
 
-            BoilerGO newBoiler = Instantiate(boilerDatabase.boilerList[idNext].prefab, Vector3.zero, Quaternion.identity, boilerHolder).GetComponent<BoilerGO>();
-            newBoiler.gameObject.AddComponent<RotateAndLimitX>();
+            BoilerGO newBoiler = Instantiate(boilerDatabase.boilerList[idNext].prefab, Vector3.zero, Quaternion.identity, boilerHolder).GetComponent<BoilerGO>();            
         }
     }
 }
