@@ -10,13 +10,14 @@ namespace SteamBoiler.tPart.ARSteamBoiler
         public void OnClick()
         {
             StartCoroutine(C_OnClick());
-        }
+        }        
 
         IEnumerator C_OnClick()
         {
             BoilerGO boiler = FindObjectOfType<BoilerGO>();
             if (boiler == null) yield break;
             boiler.OuterOn();
+            boiler.SetInnerClickable(false);
             boiler.GetComponent<BoilerGOCreateArrow>().ClearArrow();
 
             yield break;

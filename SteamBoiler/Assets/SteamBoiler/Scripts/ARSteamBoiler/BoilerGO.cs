@@ -12,11 +12,17 @@ public class BoilerGO : MonoBehaviour
     public List<Transform> outers = new List<Transform>();
     public List<Transform> inners = new List<Transform>();
 
-    private void Start()
+    IEnumerator Start()
     {
         OuterOn();
+
         SetupInside();
-    }
+        yield return new WaitUntil(() => doneSetupInside == true);
+
+        SetInnerClickable(false);
+
+        yield break;
+    }    
 
     [ContextMenu("OuterToggle")]
     public void OuterToggle()
@@ -117,16 +123,14 @@ public class BoilerGO : MonoBehaviour
         yield break;
     }
 
-    void SetInnerClickable(bool Set)
+    public void SetInnerClickable(bool Set)
     {
         Transform[] allPart = inside.GetComponentsInChildren<Transform>();
 
         foreach (var part in allPart)
         {
-            //if (part.GetComponent<)
-            //{
-                
-            //}
+            LeanSelectable select = part.GetComponent<LeanSelectable>();
+            if (select != null) select.enabled = Set;
         }
     }
 }
