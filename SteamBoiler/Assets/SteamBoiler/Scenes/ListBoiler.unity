@@ -1053,7 +1053,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 50
+  field of view: 30
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1102,7 +1102,7 @@ MonoBehaviour:
   RequiredSelectable: {fileID: 0}
   WheelSensitivity: 0
   Relative: 0
-  Zoom: 50
+  Zoom: 30
   ZoomClamp: 0
   ZoomMin: 10
   ZoomMax: 60

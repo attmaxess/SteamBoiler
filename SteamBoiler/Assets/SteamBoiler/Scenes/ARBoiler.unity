@@ -1556,7 +1556,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.05669957, y: 0.38319078}
   m_AnchorMax: {x: 0.94115025, y: 0.97519076}
-  m_AnchoredPosition: {x: 0.49996948, y: 0}
+  m_AnchoredPosition: {x: 0.5, y: 0}
   m_SizeDelta: {x: -1, y: -0.30000305}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1901548533
@@ -1708,7 +1708,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 50
+  field of view: 30
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1757,7 +1757,7 @@ MonoBehaviour:
   RequiredSelectable: {fileID: 0}
   WheelSensitivity: 0
   Relative: 0
-  Zoom: 50
+  Zoom: 30
   ZoomClamp: 0
   ZoomMin: 10
   ZoomMax: 60
