@@ -1,4 +1,5 @@
 ﻿using Lean.Touch;
+using SteamBoiler.tPart.ARSteamBoiler;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,7 +23,7 @@ public class BoilerGO : MonoBehaviour
         SetInnerClickable(false);
 
         yield break;
-    }    
+    }
 
     [ContextMenu("OuterToggle")]
     public void OuterToggle()
@@ -105,7 +106,13 @@ public class BoilerGO : MonoBehaviour
             if (part.transform != inside)
             {
                 part.gameObject.AddComponent<LeanSelectable>();
-                yield return new WaitUntil(() => part.gameObject.GetComponent<LeanSelectable>() != null);                
+                yield return new WaitUntil(() => part.gameObject.GetComponent<LeanSelectable>() != null);
+
+                LeanSelectable selectable = part.gameObject.GetComponent<LeanSelectable>();
+
+                yield return new WaitUntil(() => DatabaseManager.Instance != null);
+                BoilerPart boilerPart = DatabaseManager.Instance.scriptCurrentBoiler.currentBoiler.GetBoilerPart(part.name);
+                if (boilerPart != null) selectable.enabled = boilerPart.isClickable;
 
                 part.gameObject.AddComponent<LeanSelectableRendererColor>();
                 yield return new WaitUntil(() => part.gameObject.GetComponent<LeanSelectableRendererColor>() != null);
@@ -125,12 +132,22 @@ public class BoilerGO : MonoBehaviour
 
     public void SetInnerClickable(bool Set)
     {
+        StartCoroutine(C_SetInnerClickable(Set));
+    }
+
+    IEnumerator C_SetInnerClickable(bool Set)
+    {
         Transform[] allPart = inside.GetComponentsInChildren<Transform>();
 
         foreach (var part in allPart)
         {
-            LeanSelectable select = part.GetComponent<LeanSelectable>();
-            if (select != null) select.enabled = Set;
+            LeanSelectable select = part.GetComponent<LeanSelectable>();            
+            if (select != null)
+            {
+                yield return new WaitUntil(() => DatabaseManager.Instance != null);
+                BoilerPart boilerPart = DatabaseManager.Instance.scriptCurrentBoiler.currentBoiler.GetBoilerPart(part.name);
+                if (boilerPart != null) select.enabled = boilerPart.isClickable ? Set : false;
+            }
         }
     }
 }

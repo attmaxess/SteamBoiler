@@ -238,6 +238,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114817318130805230, guid: 639f1f7cb9b0ca2468b1c2f3a3e34286,
+        type: 2}
+      propertyPath: boilerHolder
+      value: 
+      objectReference: {fileID: 603037698}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 639f1f7cb9b0ca2468b1c2f3a3e34286, type: 2}
   m_IsPrefabAsset: 0

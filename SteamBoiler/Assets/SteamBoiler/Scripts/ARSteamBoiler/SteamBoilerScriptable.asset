@@ -14,6 +14,15 @@ MonoBehaviour:
   database: {fileID: 11400000, guid: 539e1fc4e40b5f7409191a16fd164b5d, type: 2}
   _imageName: 
   currentBoiler:
-    imageName: 
-    prefab: {fileID: 0}
-    boilerParts: []
+    imageName: RedBoiler
+    prefab: {fileID: 1949312819902616, guid: fefe6a6284935eb4eaf9df944059eef1, type: 2}
+    boilerParts:
+    - partName: Head
+      partIntro: Head Head Head
+      isClickable: 1
+    - partName: Body
+      partIntro: Body Body Body
+      isClickable: 0
+    - partName: Tail
+      partIntro: Tail Tail Tail
+      isClickable: 1

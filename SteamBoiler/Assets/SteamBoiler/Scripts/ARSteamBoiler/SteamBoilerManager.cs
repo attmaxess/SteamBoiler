@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace SteamBoiler.tPart.ARSteamBoiler
 {
-    public class SteamBoilerManager : Singleton<SteamBoilerManager>
+    public class SteamBoilerManager : SingletonDatabaseManager<SteamBoilerManager>
     {
         [Header("Data")]
         public SteamBoilerScriptable boilerData = null;

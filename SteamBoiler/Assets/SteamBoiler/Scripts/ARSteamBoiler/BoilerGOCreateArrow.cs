@@ -42,9 +42,19 @@ public class BoilerGOCreateArrow : MonoBehaviour
         }
     }
 
+    [Header("ClearArrow")]
+    public bool doneClearArrow = true;
+
     [ContextMenu("ClearArrow")]
     public void ClearArrow()
     {
+        StartCoroutine(C_ClearArrow());
+    }
+
+    IEnumerator C_ClearArrow()
+    {
+        doneClearArrow = false;
+
         Transform[] allInside = inside.GetComponentsInChildren<Transform>();
         foreach (var arrow in allInside)
         {
@@ -53,5 +63,9 @@ public class BoilerGOCreateArrow : MonoBehaviour
                 Destroy(arrow.gameObject);
             }
         }
+
+        doneClearArrow = true;
+
+        yield break;
     }
 }
