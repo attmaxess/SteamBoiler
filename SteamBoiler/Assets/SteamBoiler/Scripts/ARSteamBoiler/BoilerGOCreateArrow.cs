@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using SteamBoiler.tPart.ARSteamBoiler;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,12 +17,17 @@ public class BoilerGOCreateArrow : MonoBehaviour
     [ContextMenu("AddArrow")]
     public void AddArrow()
     {
+        StartCoroutine(C_AddArrow());
+    }
+
+    IEnumerator C_AddArrow()
+    {
         inside = gameObject.transform.Find("Inside");
 
         if (inside == null)
         {
             Debug.Log("Boiler not have inside !");
-            return;
+            yield break;
         }
 
         Transform[] allPart = inside.GetComponentsInChildren<Transform>();
@@ -29,15 +35,20 @@ public class BoilerGOCreateArrow : MonoBehaviour
         if (allPart == null)
         {
             Debug.Log("Boiler not have part !");
-            return;
+            yield break;
         }
 
         foreach (var part in allPart)
         {
             if (part.GetComponent<IntroSelectable>() != null)
             {
-                ReportArrow arrow = Instantiate(arrowPrefab).GetComponent<ReportArrow>();
-                arrow.SetupInit(part);
+                yield return new WaitUntil(() => DatabaseManager.Instance != null);
+                BoilerPart boilerPart = DatabaseManager.Instance.scriptCurrentBoiler.currentBoiler.GetBoilerPart(part.name);
+                if (boilerPart != null && boilerPart.isClickable)
+                {
+                    ReportArrow arrow = Instantiate(arrowPrefab).GetComponent<ReportArrow>();
+                    arrow.SetupInit(part);
+                }
             }
         }
     }
