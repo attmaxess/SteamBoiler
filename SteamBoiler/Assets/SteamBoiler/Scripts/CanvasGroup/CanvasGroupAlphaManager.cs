@@ -12,17 +12,23 @@ public class CanvasGroupAlphaManager : MonoBehaviour
     public bool Alpha0AtStart = false;
     public bool Alpha1AtStart = false;
 
-    private void Start()
+    public delegate void delAt1();
+    public delAt1 delat1 = null;
+
+    public delegate void delAt0();
+    public delAt0 delat0 = null;
+
+    private void Awake()
     {
         if (Alpha0AtStart)
         {
             InstantAlpha1();
-            Alpha0();
+            GoTo1WaitBack0();
         }
         else if (Alpha1AtStart)
         {
             InstantAlpha0();
-            Alpha1();
+            GoTo0WaitBack1();
         }
     }
 
@@ -79,6 +85,9 @@ public class CanvasGroupAlphaManager : MonoBehaviour
         canvasGroup.alpha = a;
         canvasGroup.interactable = a != 0;
         canvasGroup.blocksRaycasts = a != 0;
+
+        if (a == 0) { if (delat0 != null) delat0.Invoke(); }
+        else if (a == 1) { if (delat1 != null) delat1.Invoke(); }
     }
 
     [Header("C_ToAlPha")]
@@ -98,6 +107,9 @@ public class CanvasGroupAlphaManager : MonoBehaviour
 
         canvasGroup.interactable = a != 0;
         canvasGroup.blocksRaycasts = a != 0;
+
+        if (a == 0) { if (delat0 != null) delat0.Invoke(); }
+        else if (a == 1) { if (delat1 != null) delat1.Invoke(); }
 
         doneC_ToAlPha = true;
         yield break;

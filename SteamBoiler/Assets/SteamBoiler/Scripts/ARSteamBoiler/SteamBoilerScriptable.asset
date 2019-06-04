@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: SteamBoilerScriptable
   m_EditorClassIdentifier: 
   database: {fileID: 11400000, guid: 539e1fc4e40b5f7409191a16fd164b5d, type: 2}
-  _imageName: 
+  _imageName: RedBoiler
   currentBoiler:
     imageName: RedBoiler
     prefab: {fileID: 1949312819902616, guid: fefe6a6284935eb4eaf9df944059eef1, type: 2}

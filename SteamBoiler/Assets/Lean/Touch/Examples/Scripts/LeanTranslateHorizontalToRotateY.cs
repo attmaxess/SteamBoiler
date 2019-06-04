@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Lean.Touch
 {	
-	public class LeanTranslateToRotateX : MonoBehaviour
+	public class LeanTranslateHorizontalToRotateY : MonoBehaviour
 	{
 		[Tooltip("Ignore fingers with StartedOverGui?")]
 		public bool IgnoreStartedOverGui = true;
