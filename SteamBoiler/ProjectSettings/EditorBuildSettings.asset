@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SteamBoiler/Scenes/DCMH/Boiler.unity
     guid: 4aecddf43dfdaa548b959f3781ed01fb
+  - enabled: 1
+    path: Assets/SteamBoiler/Scenes/MHAppSQ3000AS/Marker.unity
+    guid: d105bf56b0fa04c47bca2658e3701058
   m_configObjects: {}
